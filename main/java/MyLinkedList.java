@@ -111,4 +111,21 @@ public class MyLinkedList<K extends Comparable<K>> {
         myNodes.append((tempNode.getKey()));
         System.out.println(myNodes);
     }
+
+    @SuppressWarnings("unchecked")
+    public MyMapNode<K, ?> Search_Map(K key) {
+        INode<K> tempNode = this.head;
+        while (tempNode != null) {
+            if (tempNode.getKey().equals(key)) { // Compare the keys
+                return (MyMapNode<K, ?>) tempNode; // Return the matching node
+            }
+            tempNode = tempNode.getNext();
+        }
+        return null; // Return null if no match is found
+    }
+
+    @Override
+    public String toString(){
+        return "MyLinkedListNodes{" + head + "}";
+    }
 }

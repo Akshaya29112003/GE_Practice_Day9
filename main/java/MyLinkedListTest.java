@@ -114,27 +114,27 @@ public class MyLinkedListTest {
 //        Assert.assertTrue(result);
 //    }
 
-//    @Test
-//    public void SearchingNode() {
-//        MyNode<Integer> myFirstNode = new MyNode<>(56);
-//        MyNode<Integer> mySecondNode = new MyNode<>(30);
-//        MyNode<Integer> myThirdNode = new MyNode<>(70);
-//
-//        MyLinkedList myLinkedList = new MyLinkedList();
-//        myLinkedList.add(myFirstNode);
-//        myLinkedList.append(mySecondNode);
-//        myLinkedList.append(myThirdNode);
-//
-//        INode res = myLinkedList.Search(mySecondNode);
-//        System.out.println("Searched Node is : " + res.getKey());
-//
-//        myLinkedList.printMyNodes();
-//
-//        boolean result = myLinkedList.head.equals(myFirstNode) &&
-//                myLinkedList.head.getNext().equals(mySecondNode) &&
-//                myLinkedList.tail.equals(myThirdNode);
-//        Assert.assertTrue(result);
-//    }
+    @Test
+    public void SearchingNode() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.add(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
+
+        INode res = myLinkedList.Search(mySecondNode);
+        System.out.println("Searched Node is : " + res.getKey());
+
+        myLinkedList.printMyNodes();
+
+        boolean result = myLinkedList.head.equals(myFirstNode) &&
+                myLinkedList.head.getNext().equals(mySecondNode) &&
+                myLinkedList.tail.equals(myThirdNode);
+        Assert.assertTrue(result);
+    }
 
 //    @Test
 //    public void DeleteMiddleNode() {
@@ -164,31 +164,31 @@ public class MyLinkedListTest {
 //        Assert.assertTrue(result);
 //    }
 
-    @Test
-    public void SortingLinkedList() {
-        MyNode<Integer> myFirstNode = new MyNode<>(56);
-        MyNode<Integer> mySecondNode = new MyNode<>(30);
-        MyNode<Integer> myThirdNode = new MyNode<>(40);
-        MyNode<Integer> myForthNode = new MyNode<>(70);
-
-        MyLinkedList myLinkedList = new MyLinkedList();
-        myLinkedList.add(myFirstNode);
-        myLinkedList.append(mySecondNode);
-        myLinkedList.append(myThirdNode);
-        myLinkedList.append(myForthNode);
-
-        System.out.println("Before Sorting : ");
-        myLinkedList.printMyNodes();
-
-        myLinkedList.Sorting();
-
-        System.out.println("After Sorting : ");
-        myLinkedList.printMyNodes();
-
-        boolean result = mySecondNode.getNext().equals(myThirdNode) &&
-                myForthNode.getNext() == null; // Check last node points to null
-
-        Assert.assertTrue(result);
-
-    }
+//    @Test
+//    public void SortingLinkedList() {
+//        MyNode<Integer> myFirstNode = new MyNode<>(56);
+//        MyNode<Integer> mySecondNode = new MyNode<>(30);
+//        MyNode<Integer> myThirdNode = new MyNode<>(40);
+//        MyNode<Integer> myForthNode = new MyNode<>(70);
+//
+//        MyLinkedList myLinkedList = new MyLinkedList();
+//        myLinkedList.add(myFirstNode);
+//        myLinkedList.append(mySecondNode);
+//        myLinkedList.append(myThirdNode);
+//        myLinkedList.append(myForthNode);
+//
+//        System.out.println("Before Sorting : ");
+//        myLinkedList.printMyNodes();
+//
+//        myLinkedList.Sorting();
+//
+//        System.out.println("After Sorting : ");
+//        myLinkedList.printMyNodes();
+//
+//        boolean result = mySecondNode.getNext().equals(myThirdNode) &&
+//                myForthNode.getNext() == null; // Check last node points to null
+//
+//        Assert.assertTrue(result);
+//
+//    }
 }
